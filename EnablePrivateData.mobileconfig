@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>PayloadContent</key>
+  <array>
+    <dict>
+      <key>PayloadDisplayName</key><string>Unified Logging - Private Data</string>
+      <key>PayloadEnabled</key><true/>
+      <key>PayloadIdentifier</key><string>com.homelab.logging.privatedata</string>
+      <key>PayloadType</key><string>com.apple.system.logging</string>
+      <key>PayloadUUID</key><string>5CE69B42-81C4-43AA-AFE7-9663B0940266</string>
+      <key>PayloadVersion</key><integer>1</integer>
+      <key>Subsystems</key>
+      <dict>
+        <key>com.apple.opendirectoryd</key>
+        <dict>
+          <key>DEFAULT-OPTIONS</key>
+          <dict><key>Enable-Private-Data</key><true/></dict>
+        </dict>
+      </dict>
+    </dict>
+  </array>
+  <key>PayloadDisplayName</key><string>Homelab - Enable Private Auth Logging</string>
+  <key>PayloadIdentifier</key><string>com.homelab.logging.profile</string>
+  <key>PayloadScope</key><string>System</string>
+  <key>PayloadType</key><string>Configuration</string>
+  <key>PayloadUUID</key><string>EBC16841-9D05-4154-A8CC-554DB0C9D262</string>
+  <key>PayloadVersion</key><integer>1</integer>
+</dict>
+</plist>
