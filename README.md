@@ -260,7 +260,7 @@ No custom rules were required — Wazuh's existing OS-agnostic syslog/sudo rules
 
 **MITRE ATT&CK mapping:** [T1110 — Brute Force](https://attack.mitre.org/techniques/T1110/)
 
-*(Add your own Discover screenshot here, e.g. `docs/screenshots/rule-5404-alert.png`)*
+![Rule 5404 alert in Discover](docs/Rule-5404-Alert.png)
 
 ---
 
