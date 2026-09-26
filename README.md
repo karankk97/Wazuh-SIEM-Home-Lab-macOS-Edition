@@ -313,15 +313,14 @@ flowchart TB
 ## Repository Structure
 
 ```
-.
-├── README.md
-├── LICENSE
-├── configs/
-│   ├── ossec.conf.sample          # sanitized agent config
-│   └── EnablePrivateData.mobileconfig
-├── docs/
-│   └── screenshots/                # dashboard & Discover evidence
-└── docker-compose.yml              # single-node Wazuh stack (or link to upstream)
+   .
+   ├── README.md
+   ├── LICENSE
+   ├── configs/
+   │   ├── ossec.conf.sample
+   │   └── EnablePrivateData.mobileconfig
+   └── docs/
+       └── Rule-5404-Alert.png
 ```
 
 ---
