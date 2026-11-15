@@ -1,18 +1,15 @@
 <!--
   ossec.conf.sample — sanitized Wazuh agent config for macOS
-  Replace YOUR_MANAGER_ADDRESS and YOUR_AGENT_NAME before use.
-  See README.md ("Roadblocks & How I Solved Them") for why this config
-  looks the way it does.
+  Reference sample for the native agent on the Mac hosting the manager.
+  Merge the relevant settings into the installed agent configuration.
 -->
 <ossec_config>
 
   <client>
     <server>
       <!--
-        Single-host lab: 127.0.0.1 is fine (Docker Desktop publishes the
-        manager's ports to loopback too). Multi-host lab: use the Docker
-        host's real LAN IP instead — ideally one reserved via your
-        router's DHCP settings so it doesn't drift. See Roadblock 5.
+        This local agent uses the manager port published on the same Mac.
+        An agent on another machine uses the Docker host's LAN address.
       -->
       <address>127.0.0.1</address>
       <port>1514</port>
@@ -75,10 +72,7 @@
   <!-- Log analysis -->
 
   <!--
-    Native macOS Unified Logging collection. This is the block that
-    actually works — see Roadblock 2 in the README for why a
-    log_format=command block polling `log show` does NOT get decoded
-    correctly by Wazuh's built-in rules.
+    Native macOS Unified Logging collection used for the sudo test.
   -->
   <localfile>
     <location>macos</location>
@@ -92,7 +86,7 @@
 
   <localfile>
     <log_format>full_command</log_format>
-    <command>netstat -an | awk '{if ((/^(tcp|udp)/) && ($4 != "*.*") && ($5 == "*.*")) {print $1" "$4" "$5}}' | sort -u</command>
+    <command>netstat -an | awk '{if ((/^(tcp|udp)/) &amp;&amp; ($4 != "*.*") &amp;&amp; ($5 == "*.*")) {print $1" "$4" "$5}}' | sort -u</command>
     <alias>netstat listening ports</alias>
     <frequency>360</frequency>
   </localfile>
